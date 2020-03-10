@@ -7,41 +7,86 @@ export default function Header() {
     <header>
       <nav className="navBar">
         <ul className="navBar__item">
-          <li className="flex-2">
+          <li
+            className="flex-2"
+            css={`
+              height: 44px;
+              line-height: 44px;
+              text-align: center;
+            `}
+          >
             <Link
               to="/"
               css={`
                 font-weight: bold;
                 font-size: 24px;
+                font-style: italic;
               `}
             >
-              Commerce
+              Easy Cart
             </Link>
           </li>
-          <li className="flex-3">
+          <li
+            className="flex-4"
+            css={`
+              position: relative;
+            `}
+          >
             <input
               type="text"
-              placeholder="search here"
+              placeholder="Search on Commerce..."
               className="navBar__item--input"
             />
+            <button
+              css={`
+                position: absolute;
+                height: 100%;
+                right: 18px;
+                top: 0;
+                font-size: 26px;
+                color: #000;
+                border: none;
+                cursor: pointer;
+                background-color: transparent;
+                &:focus {
+                  outline: none;
+                }
+              `}
+            >
+              <i className="flaticon-search"></i>
+            </button>
           </li>
-          <li className="flex-2">
+          <li
+            className="flex-2"
+            css={`
+              height: 44px;
+              line-height: 44px;
+              text-align: center;
+            `}
+          >
             <ul className="navBar__item--right">
               <li className="navBar__item--right__item">
-                <Link
-                  to="/signin"
-                  css={`
-                    text-decoration: underline;
-                  `}
-                >
+                <Link to="/signin">
+                  <i
+                    className="flaticon-profile"
+                    css={`
+                      font-size: 22px;
+                    `}
+                  ></i>{" "}
                   Signin | Register
                 </Link>
               </li>
+
               <li className="navBar__item--right__item">
-                <Link to="/orders">Returns & orders</Link>
-              </li>
-              <li className="navBar__item--right__item">
-                <Link to="/cart">cart</Link>
+                <Link to="/cart">
+                  <i
+                    className="flaticon-bag"
+                    css={`
+                      font-size: 22px;
+                    `}
+                  ></i>{" "}
+                  Shopping Cart
+                </Link>
               </li>
             </ul>
           </li>

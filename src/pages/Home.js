@@ -1,6 +1,7 @@
 import React from "react";
 import "styled-components/macro";
 import Slider from "../utils/Slider";
+import Content from "../components/Content";
 
 const images = [
   "https://colorlib.com/preview/theme/divisima/img/bg.jpg",
@@ -12,7 +13,7 @@ const Home = () => {
   return (
     <section>
       <Slider height="100vh" slides={images} />
-      <h1>Hello</h1>
+      <Content />
     </section>
   );
 };
